@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import axios from "axios"
 
 @Component({
   selector: 'home',
@@ -11,7 +12,11 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
   locationChange(data: any){
-    console.log(data);
+    axios.get(`https://app.ticketmaster.com/discovery/v2/events.json?city=${data}&apikey=wjwMPXOUtVFerXr1XhACcVNydgAZXEbH`)
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
     
   }
   dateChange(data: any){
