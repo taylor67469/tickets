@@ -4,16 +4,22 @@
 <div>
     <section>
         <div class="searchCont">
-            <h2 class="searchL search">Location</h2>
+            <h2 class="searchL search">City</h2>
             <h2 class="searchD search">Date</h2>
             <h2 class="searchA search">Availability</h2>
         </div>
         <form >
         <div class="searchCont">
-            <input #Location class="inputL search" id="Location" type="text" name="Location" placeholder="Location" (change)="locationChange(Location.value)">
+            <input #Location class="inputL search" id="Location" type="text" name="Location" placeholder="City" (change)="locationChange(Location.value)">
             <input #Date class="inputD search" type="text" name="Date" placeholder="Date" (change)="dateChange(Date.value)">
             <input #Availability class="inputA search" type="text" name="Availability" placeholder="Availability" (change)="availabilityChange(Availability.value)">
-        </div>
+        </div> 
     </form>
+    </section>
+    <section class="grid">
+    <div class="cards" *ngFor="let name of name">
+        <h4 class="venNames">{{name}}</h4>
+        <!-- <img src={{images}}> -->
+    </div>
     </section>
 </div>

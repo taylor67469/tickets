@@ -35,6 +35,26 @@
     font-style: italic;
     font-weight: bold;
 }
-input{
-    /* font-size: 30px; */
+.cards{
+    max-width: 100%;
+    /* height:300px; */
+    border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    border-style: solid;
+    display: inline-block;
+    /* justify-content: space-between; */
+    padding:20px;
+    margin-top:0;
+}
+.venNames{
+    border-style: dashed;
+    margin-top: 0;
+    font-size: 20px;
+    background-color: lightcyan;
+}
+.grid{
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  align-items: stretch;
 }
