@@ -1,25 +1,30 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div class="container">
-    <h1 class="title">Tickets</h1>
+    <h1 class="title">Tickets by City</h1>
 </div>
 <div>
     <section>
         <div class="searchCont">
             <h2 class="searchL search">City</h2>
-            <h2 class="searchD search">Date</h2>
-            <h2 class="searchA search">Availability</h2>
         </div>
-        <form >
         <div class="searchCont">
             <input #Location class="inputL search" id="Location" type="text" name="Location" placeholder="City" (change)="locationChange(Location.value)">
-            <input #Date class="inputD search" type="text" name="Date" placeholder="Date" (change)="dateChange(Date.value)">
-            <input #Availability class="inputA search" type="text" name="Availability" placeholder="Availability" (change)="availabilityChange(Availability.value)">
         </div> 
-    </form>
     </section>
     <section class="grid">
     <div class="cards" *ngFor="let name of name">
-        <h4 class="venNames">{{name}}</h4>
-        <!-- <img src={{images}}> -->
+        <h4 class="venNames">{{name[0]}}</h4>
+        <h4 class="venN">Venue: {{name[8]}}</h4>
+        <img class="venImg"src={{name[1]}} width="500px" height="400px">
+        <figcaption class="figCap">Information: {{name[3]}}</figcaption>
+        <br/>
+        <figcaption class="figCap">Start date: {{name[2]}}</figcaption>
+        <br/>
+        <figcaption class="figCap">Price ranges: Min: $ {{name[4]}}  -  Max: $ {{name[5]}}</figcaption>
+        <br/>
+        <figcaption class="figCap"><a href={{name[6]}} target="_blank" rel="noopener noreferrer">Seat Map</a></figcaption>
+        <br/>
+        <figcaption class="figCap"><a href={{name[7]}} target="_blank" rel="noopener noreferrer">Buy tickets</a></figcaption>
     </div>
     </section>
 </div>
